@@ -1,0 +1,1773 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      .jquery-ripples {
+        position: relative;
+        z-index: 0;
+      }
+    
+
+
+#background-wrap {
+    bottom: 0;
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: -1;
+}
+
+/* KEYFRAMES */
+
+@-webkit-keyframes animateBubble {
+    0% {
+        margin-top: 1000px;
+    }
+    100% {
+        margin-top: -100%;
+    }
+}
+
+@-moz-keyframes animateBubble {
+    0% {
+        margin-top: 1000px;
+    }
+    100% {
+        margin-top: -100%;
+    }
+}
+
+@keyframes animateBubble {
+    0% {
+        margin-top: 1000px;
+    }
+    100% {
+        margin-top: -100%;
+    }
+}
+
+@-webkit-keyframes sideWays { 
+    0% { 
+        margin-left:0px;
+    }
+    100% { 
+        margin-left:50px;
+    }
+}
+
+@-moz-keyframes sideWays { 
+    0% { 
+        margin-left:0px;
+    }
+    100% { 
+        margin-left:50px;
+    }
+}
+
+@keyframes sideWays { 
+    0% { 
+        margin-left:0px;
+    }
+    100% { 
+        margin-left:50px;
+    }
+}
+
+/* ANIMATIONS */
+
+.x1 {
+    -webkit-animation: animateBubble 25s linear infinite, sideWays 2s ease-in-out infinite alternate;
+	-moz-animation: animateBubble 25s linear infinite, sideWays 2s ease-in-out infinite alternate;
+	animation: animateBubble 25s linear infinite, sideWays 2s ease-in-out infinite alternate;
+	
+	left: 15%;
+	top: 2%;
+	
+	-webkit-transform: scale(0.6);
+	-moz-transform: scale(0.6);
+	transform: scale(0.6);
+}
+
+.x2 {
+    -webkit-animation: animateBubble 20s linear infinite, sideWays 4s ease-in-out infinite alternate;
+	-moz-animation: animateBubble 20s linear infinite, sideWays 4s ease-in-out infinite alternate;
+	animation: animateBubble 20s linear infinite, sideWays 4s ease-in-out infinite alternate;
+	
+	left: 5%;
+	top: 3%;
+	
+	-webkit-transform: scale(0.4);
+	-moz-transform: scale(0.4);
+	transform: scale(0.4);
+}
+
+.x3 {
+    -webkit-animation: animateBubble 28s linear infinite, sideWays 2s ease-in-out infinite alternate;
+	-moz-animation: animateBubble 28s linear infinite, sideWays 2s ease-in-out infinite alternate;
+	animation: animateBubble 28s linear infinite, sideWays 2s ease-in-out infinite alternate;
+	
+	left: 10%;
+	top: 4%;
+	
+	-webkit-transform: scale(0.7);
+	-moz-transform: scale(0.7);
+	transform: scale(0.7);
+}
+
+.x4 {
+    -webkit-animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
+	-moz-animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
+	animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
+	
+	left: 20%;
+	top: 10%;
+	
+	-webkit-transform: scale(0.3);
+	-moz-transform: scale(0.3);
+	transform: scale(0.3);
+}
+
+.x5 {
+    -webkit-animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;
+	-moz-animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;
+	animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;
+	
+	left: 30%;
+	top: 15%;
+	
+	-webkit-transform: scale(0.5);
+	-moz-transform: scale(0.5);
+	transform: scale(0.5);
+}
+
+.x6 {
+    -webkit-animation: animateBubble 21s linear infinite, sideWays 2s ease-in-out infinite alternate;
+	-moz-animation: animateBubble 21s linear infinite, sideWays 2s ease-in-out infinite alternate;
+	animation: animateBubble 21s linear infinite, sideWays 2s ease-in-out infinite alternate;
+	
+	left: 20%;
+	top: 2%;
+	
+	-webkit-transform: scale(0.8);
+	-moz-transform: scale(0.8);
+	transform: scale(0.8);
+}
+
+.x7 {
+    -webkit-animation: animateBubble 20s linear infinite, sideWays 2s ease-in-out infinite alternate;
+	-moz-animation: animateBubble 20s linear infinite, sideWays 2s ease-in-out infinite alternate;
+	animation: animateBubble 20s linear infinite, sideWays 2s ease-in-out infinite alternate;
+	
+	left: 40%;
+	top: 8%;
+	
+	-webkit-transform: scale(0.4);
+	-moz-transform: scale(0.4);
+	transform: scale(0.4);
+}
+
+.x8 {
+    -webkit-animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
+	-moz-animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
+	animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
+	
+	left: 70%;
+	top: 5%;
+	
+	-webkit-transform: scale(0.3);
+	-moz-transform: scale(0.3);
+	transform: scale(0.3);
+}
+
+.x9 {
+    -webkit-animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;
+	-moz-animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;
+	animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;
+	
+	left: 65%;
+	top: 1%;
+	
+	-webkit-transform: scale(0.6);
+	-moz-transform: scale(0.6);
+	transform: scale(0.6);
+}
+
+.x10 {
+    -webkit-animation: animateBubble 26s linear infinite, sideWays 2s ease-in-out infinite alternate;
+	-moz-animation: animateBubble 26s linear infinite, sideWays 2s ease-in-out infinite alternate;
+	animation: animateBubble 26s linear infinite, sideWays 2s ease-in-out infinite alternate;
+	
+	left: 50%;
+	top: 12%;
+	
+	-webkit-transform: scale(0.3);
+	-moz-transform: scale(0.3);
+	transform: scale(0.3);
+}
+.x11 {
+    -webkit-animation: animateBubble 26s linear infinite, sideWays 2s ease-in-out infinite alternate;
+	-moz-animation: animateBubble 26s linear infinite, sideWays 2s ease-in-out infinite alternate;
+	animation: animateBubble 26s linear infinite, sideWays 2s ease-in-out infinite alternate;
+	
+	left: 60%;
+	top: 8%;
+	
+	-webkit-transform: scale(0.3);
+	-moz-transform: scale(0.3);
+	transform: scale(0.3);
+}
+.x12 {
+    -webkit-animation: animateBubble 26s linear infinite, sideWays 2s ease-in-out infinite alternate;
+	-moz-animation: animateBubble 26s linear infinite, sideWays 2s ease-in-out infinite alternate;
+	animation: animateBubble 26s linear infinite, sideWays 2s ease-in-out infinite alternate;
+	
+	left: 50%;
+	top: 2%;
+	
+	-webkit-transform: scale(0.3);
+	-moz-transform: scale(0.3);
+	transform: scale(0.3);
+}
+
+/* OBJECTS */
+
+.bubble {
+    -webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	
+    -webkit-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgb(28, 26, 26);
+	-moz-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgb(28, 26, 26);
+	box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgb(28, 26, 26);
+	
+    height: 200px;
+	position: absolute;
+	width: 200px;
+}
+
+.bubble:after {
+    background: -moz-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 70%); /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(255,255,255,0.5)), color-stop(70%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 70%); /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 70%); /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 70%); /* IE10+ */
+    background: radial-gradient(ellipse at center,  rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 70%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	
+    -webkit-box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.3);
+	-moz-box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.3);
+	box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.3);
+	
+	content: "";
+    height: 180px;
+	left: 10px;
+	position: absolute;
+	width: 180px;
+}
+    </style>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="Name of your web site" />
+    <meta name="author" content="Marketify" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <title>Gurman | Home</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="assets/css/animation.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/base.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/cdheadline.css" />
+   
+    <link rel="stylesheet" type="text/css" href="assets/css/owlcarousel.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/owltheme.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
+
+    <!--[if lt IE 9]>
+      <script type="text/javascript" src="js/modernizr.custom.js"></script>
+    <![endif]-->
+
+    <script
+      type="text/javascript"
+      charset="UTF-8"
+      src="https://maps.googleapis.com/maps-api-v3/api/js/51/7/common.js"
+    ></script>
+    <script
+      type="text/javascript"
+      charset="UTF-8"
+      src="https://maps.googleapis.com/maps-api-v3/api/js/51/7/util.js"
+    ></script>
+  </head>
+
+  <body>
+    <div id="preloader">
+        <div class="loader_line"></div>
+        </div>
+        <div class="bubble x1"></div>
+        <div class="bubble x2"></div>
+        <div class="bubble x3"></div>
+        <div class="bubble x4"></div>
+        <div class="bubble x5"></div>
+        <div class="bubble x6"></div>
+        <div class="bubble x7"></div>
+        <div class="bubble x8"></div>
+        <div class="bubble x9"></div>
+        <div class="bubble x10"></div>
+        <div class="bubble x11"></div>
+        <div class="bubble x12"></div>
+    <div
+      class="cavani_tm_all_wrap w-full min-h-[100vh] clear-both float-left relative opened"
+      data-magic-cursor="show"
+      data-enter="rollIn"
+    >
+      <div class="cavani_tm_modalbox">
+        <div class="box_inner">
+          <div class="close">
+            <a href="#"><i class="icon-cancel"></i></a>
+          </div>
+          <div class="description_wrap"></div>
+        </div>
+      </div>
+      <div
+        class="cavani_tm_left_border fixed inset-y-0 left-0 w-[70px] bg-white z-[10]"
+      ></div>
+      <div
+        class="cavani_tm_right_border fixed inset-y-0 right-0 w-[70px] bg-white z-[10]"
+      ></div>
+
+      <div
+        class="cavani_tm_topbar fixed top-0 left-0 right-0 h-[50px] bg-white z-[15] hidden middle:block"
+      >
+        <div
+          class="topbar_inner w-full h-full clear-both flex items-center justify-between py-0 px-[20px]"
+        >
+          <div class="logo">
+            <a
+              class="text text-black uppercase font-poppins text-[22px] font-extrabold tracking-[2px] leading-[50px]"
+              href="/"
+              ><span>Gurman Deep</span></a
+            >
+          </div>
+          <div class="trigger relative top-[5px]">
+            <div class="hamburger hamburger--slider">
+              <div class="hamburger-box">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                  />
+                </svg>
+
+                <div class="hamburger-inner"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="cavani_tm_mobile_menu fixed top-[50px] right-[-200px] h-[100vh] w-[200px] z-[15] bg-white transition-all duration-300"
+      >
+        <div
+          class="inner relative w-full h-full text-right px-[20px] pt-[70px] pb-[20px]"
+        >
+          <div class="wrapper">
+            <div
+              class="avatar w-[70px] h-[70px] relative float-right mb-[60px]"
+            >
+              <div
+                class="image absolute inset-0 bg-no-repeat bg-cover bg-center"
+                data-img-url="https://www.tutorialspoint.com/laravel/images/laravel-mini-logo.jpg"
+                style="background-image: url('https://www.tutorialspoint.com/laravel/images/laravel-mini-logo.jpg')"
+              ></div>
+            </div>
+            <div
+              class="menu_list w-full h-auto clear-both float-left mb-[50px]"
+            >
+              <ul class="transition_link">
+                <li class="mb-[7px]">
+                  <a class="text-[#333] font-poppins" href="#home">Home</a>
+                </li>
+                <li class="mb-[7px]">
+                  <a class="text-[#333] font-poppins" href="#about">About</a>
+                </li>
+
+                <li class="mb-[7px]">
+                  <a class="text-[#333] font-poppins" href="#service"
+                    >Service</a
+                  >
+                </li>
+                <!--li class="mb-[7px]">
+                  <a class="text-[#333] font-poppins" href="#news">Projects</a>
+                </li--->
+                <li class="mb-[7px]">
+                  <a class="text-[#333] font-poppins" href="#contact"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="social w-full float-left mb-[5px]">
+              <ul>
+                <li class="mr-[8px] inline-block">
+                  <a class="text-[#333]" href="#"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      version="1.1"
+                      id="Capa_1"
+                      x="0px"
+                      y="0px"
+                      width="96.124px"
+                      height="96.123px"
+                      viewBox="0 0 96.124 96.123"
+                      style="enable-background: new 0 0 96.124 96.123"
+                      xml:space="preserve"
+                      class="svg replaced-svg"
+                    >
+                      <g>
+                        <path
+                          d="M72.089,0.02L59.624,0C45.62,0,36.57,9.285,36.57,23.656v10.907H24.037c-1.083,0-1.96,0.878-1.96,1.961v15.803   c0,1.083,0.878,1.96,1.96,1.96h12.533v39.876c0,1.083,0.877,1.96,1.96,1.96h16.352c1.083,0,1.96-0.878,1.96-1.96V54.287h14.654   c1.083,0,1.96-0.877,1.96-1.96l0.006-15.803c0-0.52-0.207-1.018-0.574-1.386c-0.367-0.368-0.867-0.575-1.387-0.575H56.842v-9.246   c0-4.444,1.059-6.7,6.848-6.7l8.397-0.003c1.082,0,1.959-0.878,1.959-1.96V1.98C74.046,0.899,73.17,0.022,72.089,0.02z"
+                        ></path>
+                      </g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g></svg
+                  ></a>
+                </li>
+                <li class="mr-[8px] inline-block">
+                  <a class="text-[#333]" href="#"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      version="1.1"
+                      id="Capa_1"
+                      x="0px"
+                      y="0px"
+                      viewBox="0 0 512 512"
+                      style="enable-background: new 0 0 512 512"
+                      xml:space="preserve"
+                      class="svg replaced-svg"
+                    >
+                      <g>
+                        <g>
+                          <path
+                            d="M512,97.248c-19.04,8.352-39.328,13.888-60.48,16.576c21.76-12.992,38.368-33.408,46.176-58.016    c-20.288,12.096-42.688,20.64-66.56,25.408C411.872,60.704,384.416,48,354.464,48c-58.112,0-104.896,47.168-104.896,104.992    c0,8.32,0.704,16.32,2.432,23.936c-87.264-4.256-164.48-46.08-216.352-109.792c-9.056,15.712-14.368,33.696-14.368,53.056    c0,36.352,18.72,68.576,46.624,87.232c-16.864-0.32-33.408-5.216-47.424-12.928c0,0.32,0,0.736,0,1.152    c0,51.008,36.384,93.376,84.096,103.136c-8.544,2.336-17.856,3.456-27.52,3.456c-6.72,0-13.504-0.384-19.872-1.792    c13.6,41.568,52.192,72.128,98.08,73.12c-35.712,27.936-81.056,44.768-130.144,44.768c-8.608,0-16.864-0.384-25.12-1.44    C46.496,446.88,101.6,464,161.024,464c193.152,0,298.752-160,298.752-298.688c0-4.64-0.16-9.12-0.384-13.568    C480.224,136.96,497.728,118.496,512,97.248z"
+                          ></path>
+                        </g>
+                      </g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g></svg
+                  ></a>
+                </li>
+                <li class="mr-[8px] inline-block">
+                  <a class="text-[#333]" href="#"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      version="1.1"
+                      id="Capa_1"
+                      x="0px"
+                      y="0px"
+                      viewBox="0 0 512 512"
+                      style="enable-background: new 0 0 512 512"
+                      xml:space="preserve"
+                      width="512"
+                      height="512"
+                      class="svg replaced-svg"
+                    >
+                      <g>
+                        <path
+                          d="M256,152c-57.9,0-105,47.1-105,105s47.1,105,105,105s105-47.1,105-105S313.9,152,256,152z M256,152   c-57.9,0-105,47.1-105,105s47.1,105,105,105s105-47.1,105-105S313.9,152,256,152z M437,0H75C33.6,0,0,33.6,0,75v362   c0,41.4,33.6,75,75,75h362c41.4,0,75-33.6,75-75V75C512,33.6,478.4,0,437,0z M256,392c-74.399,0-135-60.601-135-135   c0-74.401,60.601-135,135-135s135,60.599,135,135C391,331.399,330.399,392,256,392z M421,122c-16.5,0-30-13.5-30-30s13.5-30,30-30   s30,13.5,30,30S437.5,122,421,122z M256,152c-57.9,0-105,47.1-105,105s47.1,105,105,105s105-47.1,105-105S313.9,152,256,152z    M256,152c-57.9,0-105,47.1-105,105s47.1,105,105,105s105-47.1,105-105S313.9,152,256,152z M256,152c-57.9,0-105,47.1-105,105   s47.1,105,105,105s105-47.1,105-105S313.9,152,256,152z"
+                        ></path>
+                      </g></svg
+                  ></a>
+                </li>
+                <li class="mr-[8px] inline-block">
+                  <a class="text-[#333]" href="#"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="512pt"
+                      viewBox="0 0 512 512"
+                      width="512pt"
+                      class="svg replaced-svg"
+                    >
+                      <path
+                        d="m333.023438 279.15625c25.109374 63.527344 43.753906 128.929688 55.871093 195.746094 17.285157-10.539063 33.441407-23.203125 48.125-37.882813 38.140625-38.144531 62.753907-86.207031 71.449219-138.371093-37.46875-15.5-78.503906-24.078126-121.507812-24.078126-18.382813 0-36.398438 1.585938-53.9375 4.585938zm0 0"
+                      ></path>
+                      <path
+                        d="m437.234375 75.199219c-.074219-.070313-.144531-.148438-.214844-.21875-48.355469-48.351563-112.640625-74.980469-181.019531-74.980469-26.738281 0-52.851562 4.089844-77.628906 11.941406 39.714844 49.757813 74.652344 102.859375 104.59375 158.980469 56.40625-23.949219 108.363281-56.398437 154.269531-95.722656zm0 0"
+                      ></path>
+                      <path
+                        d="m457.347656 97.859375c-48.15625 41.363281-101.96875 74.882813-160.527344 99.933594 8.632813 17.378906 16.785157 35.035156 24.480469 52.953125 21.488281-4.089844 43.414063-6.175782 65.660157-6.175782 43.089843 0 85 7.75 124.769531 23.003907.171875-3.84375.269531-7.699219.269531-11.570313 0-58.09375-19.226562-113.222656-54.652344-158.144531zm0 0"
+                      ></path>
+                      <path
+                        d="m98.425781 457.800781c44.816407 35.140625 99.730469 54.199219 157.574219 54.199219 36.765625 0 72.34375-7.710938 104.902344-22.34375-12.203125-70.710938-31.742188-138.9375-57.8125-203.871094-90.597656 24.726563-165.238282 88.484375-204.664063 172.015625zm0 0"
+                      ></path>
+                      <path
+                        d="m251.160156 271.992188c13.167969-5.570313 26.589844-10.289063 40.222656-14.171876-7.195312-16.476562-14.828124-32.71875-22.859374-48.730468-69.160157 25.679687-141.882813 38.691406-216.585938 38.691406-17.355469 0-34.597656-.714844-51.714844-2.113281-.1367185 3.433593-.222656 6.878906-.222656 10.335937 0 68.378906 26.628906 132.664063 74.980469 181.015625.015625.015625.035156.03125.050781.046875 16.722656-33.351562 38.59375-63.664062 65.242188-90.316406 32.035156-32.03125 69.339843-57.183594 110.886718-74.757812zm0 0"
+                      ></path>
+                      <path
+                        d="m254.492188 182.144531c-30.378907-56.261719-65.921876-109.34375-105.980469-158.617187-26.996094 12.503906-51.867188 29.789062-73.53125 51.453125-38.734375 38.734375-63.511719 87.699219-71.839844 140.800781 16.09375 1.316406 32.367187 2 48.796875 2 71.101562 0 139.324219-12.585938 202.554688-35.636719zm0 0"
+                      ></path></svg
+                  ></a>
+                </li>
+                <li class="inline-block">
+                  <a class="text-[#333]" href="#"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      id="Capa_1"
+                      enable-background="new 0 0 512 512"
+                      height="512"
+                      viewBox="0 0 512 512"
+                      width="512"
+                      class="svg replaced-svg"
+                    >
+                      <g>
+                        <path
+                          d="m480.32 128.39c-29.22 0-56.18-9.68-77.83-26.01-24.83-18.72-42.67-46.18-48.97-77.83-1.56-7.82-2.4-15.89-2.48-24.16h-83.47v228.08l-.1 124.93c0 33.4-21.75 61.72-51.9 71.68-8.75 2.89-18.2 4.26-28.04 3.72-12.56-.69-24.33-4.48-34.56-10.6-21.77-13.02-36.53-36.64-36.93-63.66-.63-42.23 33.51-76.66 75.71-76.66 8.33 0 16.33 1.36 23.82 3.83v-62.34-22.41c-7.9-1.17-15.94-1.78-24.07-1.78-46.19 0-89.39 19.2-120.27 53.79-23.34 26.14-37.34 59.49-39.5 94.46-2.83 45.94 13.98 89.61 46.58 121.83 4.79 4.73 9.82 9.12 15.08 13.17 27.95 21.51 62.12 33.17 98.11 33.17 8.13 0 16.17-.6 24.07-1.77 33.62-4.98 64.64-20.37 89.12-44.57 30.08-29.73 46.7-69.2 46.88-111.21l-.43-186.56c14.35 11.07 30.04 20.23 46.88 27.34 26.19 11.05 53.96 16.65 82.54 16.64v-60.61-22.49c.02.02-.22.02-.24.02z"
+                        ></path>
+                      </g></svg
+                  ></a>
+                </li>
+              </ul>
+            </div>
+            <div class="copyright w-full float-left">
+              <p class="text-[#333] font-poppins">Copyright © 2023</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="cavani_tm_header fixed top-0 left-0 right-0 h-[70px] leading-[70px] bg-white z-[10] flex items-center justify-between py-0 px-[70px] middle:hidden"
+      >
+        <div class="logo" data-type="image">
+          <a class="font-extrabold bg-transparent text-black text-2xl" href=""
+            >Gurman Deep</a
+          >
+          <a
+            class="text no-underline text-black uppercase font-poppins text-[25px] font-extrabold tracking-[2px] leading-[70px]"
+            href="#"
+            ><span class="relative top-[2px]">Gurman Deep</span></a
+          >
+        </div>
+        <div class="menu relative">
+          <ul class="transition_link">
+            <li class="float-left active">
+              <a
+                class="text-[#333] font-poppins font-medium py-0 px-[30px] inline-block transition-all duration-300"
+                href="#home"
+                >Home</a
+              >
+            </li>
+            <li class="float-left">
+              <a
+                class="text-[#333] font-poppins font-medium py-0 px-[30px] inline-block transition-all duration-300"
+                href="#about"
+                >About</a
+              >
+            </li>
+
+            <li class="float-left">
+              <a
+                class="text-[#333] font-poppins font-medium py-0 px-[30px] inline-block transition-all duration-300"
+                href="#service"
+                >Service</a
+              >
+            </li>
+            <!---li class="float-left">
+              <a
+                class="text-[#333] font-poppins font-medium py-0 px-[30px] inline-block transition-all duration-300"
+                href="#news"
+                >Projects</a
+              >
+            </li--->
+            <li class="float-left">
+              <a
+                class="text-[#333] font-poppins font-medium py-0 px-[30px] inline-block transition-all duration-300"
+                href="#contact"
+                >Contact</a
+              >
+            </li>
+          </ul>
+          <span
+            class="ccc absolute w-[30px] block top-[15px] bottom-[15px] bg-[#333] z-[-1] transition-all duration-500"
+            style="left: 0px; width: 88.9875px"
+          ></span>
+        </div>
+      </div>
+
+      <div
+        class="cavani_tm_mainpart absolute inset-[70px] overflow-hidden middle:inset-x-0 middle:bottom-0 middle:top-[55px]"
+      >
+        <div class="author_image absolute top-0 left-0 bottom-0 w-[40%] z-[15]">
+          <div class="glitch_wrap">
+            <div class="glitch back" style="z-index: 5"></div>
+            <div
+              class="glitch front-1"
+              style="
+                z-index: 6;
+                clip: rect(1095px, 9999px, 538px, 0px);
+                right: 16px;
+                left: 2px;
+              "
+            ></div>
+            <div
+              class="glitch front-2"
+              style="
+                z-index: 7;
+                clip: rect(319px, 9999px, 831px, 0px);
+                left: 30px;
+                right: 38px;
+                transform: scale(0.99);
+              "
+            ></div>
+            <div
+              class="glitch front-3"
+              style="
+                z-index: 8;
+                mix-blend-mode: hue;
+                clip: rect(1520px, 9999px, 959px, 0px);
+                left: 40px;
+                right: 34px;
+                transform: scale(0.92);
+              "
+            ></div>
+          </div>
+        </div>
+        <div class="main_content absolute top-0 right-0 bottom-0 w-[60%]">
+          <div class="cavani_tm_section active animated rollIn" id="home">
+            <div
+              class="cavani_tm_home relative w-full h-full flex items-center"
+            >
+              <div class="content pl-[100px]">
+                <h3 class="name text-[72px] font-bold uppercase mb-[30px]">
+                  Gurman Deep
+                </h3>
+                <span
+                  class="line inline-block w-[70px] h-[5px] bg-[#333] mb-[30px]"
+                ></span>
+                <h3 class="job text-[25px] mb-[35px] font-light">
+                  <span class="cd-headline rotate-1">
+                    <span class="blc">Creative</span>
+                    <span class="cd-words-wrapper" style="width: 124.387px">
+                      <b class="is-hidden">Developer</b>
+                      <b class="is-visible">Freelancer</b>
+                    </span>
+                  </span>
+                </h3>
+                <div class="cavani_tm_button transition_link">
+                  <a href="#about">Learn More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="cavani_tm_section active undefined hidden animated"
+            id="about"
+          >
+            <div class="section_inner">
+              <div class="cavani_tm_about w-full h-auto clear-both float-left">
+                <div
+                  class="biography w-full h-auto clear-both float-left mb-[87px]"
+                >
+                  <div
+                    class="cavani_tm_title w-full h-auto clear-both float-left overflow-hidden"
+                  >
+                    <span
+                      class="inline-block relative font-poppins text-[#333] uppercase font-bold tracking-[8px]"
+                      >About Me</span
+                    >
+                  </div>
+                  <div
+                    class="wrapper w-full h-auto clear-both float-left flex justify-between mt-[55px]"
+                  >
+                    <div class="left w-[40%]">
+                      <p class="mb-[15px]">
+                        Hello there! My name is <strong>Gurman Deep.</strong> I
+                        am a Web Devloper, and I'm very passionate and dedicated
+                        to my work.
+                      </p>
+                      <p>
+                        With 1 year of experience as a professional a web
+                        Developer, I have acquired the skills and knowledge
+                        necessary to make your project a success.
+                      </p>
+                    </div>
+                    <div class="right w-[50%]">
+                      <ul>
+                        <li class="mb-[8px] w-full float-left">
+                          <span
+                            class="first inline-block min-w-[100px] font-bold"
+                            >Name:</span
+                          ><span class="second inline-block">Gurman Deep</span>
+                        </li>
+
+                        <li class="mb-[8px] w-full float-left">
+                          <span
+                            class="first inline-block min-w-[100px] font-bold"
+                            >Study:</span
+                          ><span class="second inline-block">GGISPU,Delhi</span>
+                        </li>
+                        <li class="mb-[8px] w-full float-left">
+                          <span
+                            class="first inline-block min-w-[100px] font-bold"
+                            >Degree:</span
+                          ><span class="second inline-block"
+                            >Bachelor of Technology</span
+                          >
+                        </li>
+                        <li class="mb-[8px] w-full float-left">
+                          <span
+                            class="first inline-block min-w-[100px] font-bold"
+                            >Mail:</span
+                          ><span class="second inline-block"
+                            ><a
+                              class="text-[#7d7789] transition-all duration-300 hover:text-[#333]"
+                              href="#"
+                              >Gurma381@gmail.com</a
+                            ></span
+                          >
+                        </li>
+                        <li class="w-full float-left">
+                          <span
+                            class="first inline-block min-w-[100px] font-bold"
+                            >Phone:</span
+                          ><span class="second inline-block"
+                            >+91 9878125064</span
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="services w-full h-auto clear-both float-left mb-[87px]"
+                >
+                  <div
+                    class="wrapper w-full h-auto clear-both float-left flex justify-between"
+                  >
+                    <div class="service_list w-[40%]">
+                      <div
+                        class="cavani_tm_title w-full h-auto clear-both float-left overflow-hidden"
+                      >
+                        <span
+                          class="inline-block relative font-poppins text-[#333] uppercase font-bold tracking-[8px]"
+                          >Services</span
+                        >
+                      </div>
+                      <div
+                        class="list w-full h-auto clear-both float-left mt-[55px]"
+                      >
+                        <ul>
+                          <li
+                            class="mb-[8px] w-full float-left relative pl-[25px]"
+                          >
+                            Frontend Development
+                          </li>
+                          <li
+                            class="mb-[8px] w-full float-left relative pl-[25px]"
+                          >
+                            Backend Development
+                          </li>
+                          <li
+                            class="mb-[8px] w-full float-left relative pl-[25px]"
+                          >
+                            Full stack Projects
+                          </li>
+                          <li
+                            class="mb-[8px] w-full float-left relative pl-[25px]"
+                          >
+                            Business website Designing
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="service_list w-[50%]">
+                      <div
+                        class="cavani_tm_title w-full h-auto clear-both float-left overflow-hidden"
+                      >
+                        <span
+                          class="inline-block relative font-poppins text-[#333] uppercase font-bold tracking-[8px]"
+                          >Interests</span
+                        >
+                      </div>
+                      <div
+                        class="list w-full h-auto clear-both float-left mt-[55px]"
+                      >
+                        <ul>
+                          <li
+                            class="mb-[8px] w-full float-left relative pl-[25px]"
+                          >
+                            Reading &amp; Writing
+                          </li>
+                          <li
+                            class="mb-[8px] w-full float-left relative pl-[25px]"
+                          >
+                            Music &amp; Cinema
+                          </li>
+                          <li
+                            class="mb-[8px] w-full float-left relative pl-[25px]"
+                          >
+                            Travel &amp; Picnik
+                          </li>
+                          <li class="w-full float-left relative pl-[25px]">
+                            Rain &amp; Snow
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              
+                <div
+                  class="resume w-full h-auto clear-both float-left mb-[75px]"
+                >
+                  <div
+                    class="wrapper w-full h-auto clear-both float-left flex justify-between"
+                  >
+                    <div class="education w-[40%]">
+                      <div
+                        class="cavani_tm_title w-full h-auto clear-both float-left overflow-hidden"
+                      >
+                        <span
+                          class="inline-block relative font-poppins text-[#333] uppercase font-bold tracking-[8px]"
+                          >Education</span
+                        >
+                      </div>
+                      <div class="list w-full h-auto clear-both float-left">
+                        <div
+                          class="univ w-full h-auto clear-both float-left mt-[55px]"
+                        >
+                          <ul class="relative inline-block pt-[10px]">
+                            <li
+                              class="w-full float-left relative pl-[20px] pb-[45px]"
+                            >
+                              <div
+                                class="list_inner w-full h-auto clear-both flex relative"
+                              >
+                                <div class="time w-1/2 pr-[20px]">
+                                  <span
+                                    class="inline-block py-[5px] px-[25px] bg-[rgba(0,0,0,.05)] rounded-[50px] text-[14px] whitespace-nowrap"
+                                    >2017 - 2019</span
+                                  >
+                                </div>
+                                <div class="place w-1/2 pl-[20px]">
+                                  <h3
+                                    class="text-[16px] mb-[2px] font-semibold"
+                                  >
+                                    D.A.V School,Amritsar
+                                  </h3>
+                                  <span class="text-[14px]">Matric</span>
+                                </div>
+                              </div>
+                            </li>
+                            <li
+                              class="w-full float-left relative pl-[20px] pb-[45px]"
+                            >
+                              <div
+                                class="list_inner w-full h-auto clear-both flex relative"
+                              >
+                                <div class="time w-1/2 pr-[20px]">
+                                  <span
+                                    class="inline-block py-[5px] px-[25px] bg-[rgba(0,0,0,.05)] rounded-[50px] text-[14px] whitespace-nowrap"
+                                    >2017 - 2019</span
+                                  >
+                                </div>
+                                <div class="place w-1/2 pl-[20px]">
+                                  <h3
+                                    class="text-[16px] mb-[2px] font-semibold"
+                                  >
+                                    D.A.V School,Amritsar
+                                  </h3>
+                                  <span class="text-[14px]">
+                                    Higher Secondary School</span
+                                  >
+                                </div>
+                              </div>
+                            </li>
+                            <li class="w-full float-left relative pl-[20px]">
+                              <div
+                                class="list_inner w-full h-auto clear-both flex relative"
+                              >
+                                <div class="time w-1/2 pr-[20px]">
+                                  <span
+                                    class="inline-block py-[5px] px-[25px] bg-[rgba(0,0,0,.05)] rounded-[50px] text-[14px] whitespace-nowrap"
+                                    >2019 - 2023</span
+                                  >
+                                </div>
+                                <div class="place w-1/2 pl-[20px]">
+                                  <h3
+                                    class="text-[16px] mb-[2px] font-semibold"
+                                  >
+                                    GGISPU
+                                  </h3>
+                                  <span class="text-[14px]"
+                                    >Bachelor Degree</span
+                                  >
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="experience w-1/2">
+                      <div
+                        class="cavani_tm_title w-full h-auto clear-both float-left overflow-hidden"
+                      >
+                        <span
+                          class="inline-block relative font-poppins text-[#333] uppercase font-bold tracking-[8px]"
+                          >Experience</span
+                        >
+                      </div>
+                      <div class="list w-full h-auto clear-both float-left">
+                        <div
+                          class="univ w-full h-auto clear-both float-left mt-[55px]"
+                        >
+                          <ul class="relative inline-block pt-[10px]">
+                            <li
+                              class="w-full float-left relative pl-[20px] pb-[45px]"
+                            >
+                              <div
+                                class="list_inner w-full h-auto clear-both flex relative"
+                              >
+                                <div class="time w-1/2 pr-[20px]">
+                                  <span
+                                    class="inline-block py-[5px] px-[25px] bg-[rgba(0,0,0,.05)] rounded-[50px] text-[14px] whitespace-nowrap"
+                                    >March 2022 - July 2022</span
+                                  >
+                                </div>
+                                <div class="place w-1/2 pl-[20px]">
+                                  <h3
+                                    class="text-[16px] mb-[2px] font-semibold"
+                                  >
+                                    DhanGuard
+                                  </h3>
+                                  <span class="text-[14px]">Web Developer</span>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="w-full float-left relative pl-[20px]">
+                              <div
+                                class="list_inner w-full h-auto clear-both flex relative"
+                              >
+                                <div class="time w-1/2 pr-[20px]">
+                                  <span
+                                    class="inline-block py-[5px] px-[25px] bg-[rgba(0,0,0,.05)] rounded-[50px] text-[14px] whitespace-nowrap"
+                                    >July 2022 - present</span
+                                  >
+                                </div>
+                                <div class="place w-1/2 pl-[20px]">
+                                  <h3
+                                    class="text-[16px] mb-[2px] font-semibold"
+                                  >
+                                    Quantum It innovation
+                                  </h3>
+                                  <span class="text-[14px]">Web Developer</span>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="partners w-full h-auto clear-both float-left mb-[92px]"
+                >
+                  <div
+                    class="cavani_tm_title w-full h-auto clear-both float-left overflow-hidden"
+                  >
+                    <span
+                      class="inline-block relative font-poppins text-[#333] uppercase font-bold tracking-[8px]"
+                      >Technology</span
+                    >
+                  </div>
+                  <div
+                    class="list w-full clear-both float-left overflow-hidden border-solid border-[#E5EDF4] border-2 mt-[62px]"
+                  >
+                    <ul
+                      class="mt-[-2px] mr-[-10px] mb-[-2px] ml-[-2px] pt-[2px] float-left pl-[2px]"
+                    >
+                      <li
+                        class="float-left w-1/4 border-solid border-[#E5EDF4] border-2 text-center h-[130px] leading-[130px] relative mt-[-2px] ml-[-2px] overflow-hidden"
+                      >
+                        <div
+                          class="list_inner w-full h-full clear-both float-left opacity-100 transition-all duration-300 hover:opacity-100"
+                        >
+                          <img
+                            class="inline-block max-w-[65%] max-h-[65px]"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpngGRjYX1ca7qAADU3K6eGLj7ShQE3L2otdzfryl_Y9Ht2QRoQKYQbsXd36XIxMbYOw0&usqp=CAU"
+                            alt=""
+                          />
+                          <a class="cavani_tm_full_link" href="#"></a>
+                        </div>
+                      </li>
+                      <li
+                        class="float-left w-1/4 border-solid border-[#E5EDF4] border-2 text-center h-[130px] leading-[130px] relative mt-[-2px] ml-[-2px] overflow-hidden"
+                      >
+                        <div
+                          class="list_inner w-full h-full clear-both float-left opacity-100 transition-all duration-300 hover:opacity-100"
+                        >
+                          <img
+                            class="inline-block max-w-[65%] max-h-[65px]"
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png"
+                            alt=""
+                          />
+                          <a class="cavani_tm_full_link" href="#"></a>
+                        </div>
+                      </li>
+                      <li
+                        class="float-left w-1/4 border-solid border-[#E5EDF4] border-2 text-center h-[130px] leading-[130px] relative mt-[-2px] ml-[-2px] overflow-hidden"
+                      >
+                        <div
+                          class="list_inner w-full h-full clear-both float-left opacity-100 transition-all duration-300 hover:opacity-100"
+                        >
+                          <img
+                            class="inline-block max-w-[65%] max-h-[65px]"
+                            src="https://symbols.getvecta.com/stencil_25/39_javascript.0ca26ec4ab.jpg"
+                            alt=""
+                          />
+                          <a class="cavani_tm_full_link" href="#"></a>
+                        </div>
+                      </li>
+                      <li
+                        class="float-left w-1/4 border-solid border-[#E5EDF4] border-2 text-center h-[130px] leading-[130px] relative mt-[-2px] ml-[-2px] overflow-hidden"
+                      >
+                        <div
+                          class="list_inner w-full h-full clear-both float-left opacity-100 transition-all duration-300 hover:opacity-100"
+                        >
+                          <img
+                            class="inline-block max-w-[65%] max-h-[65px]"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmMJRLA_m4ii9SSqusDz7SIj4MU6uT9Pcm8A&usqp=CAU"
+                            alt=""
+                          />
+                          <a class="cavani_tm_full_link" href="#"></a>
+                        </div>
+                      </li>
+                      <li
+                        class="float-left w-1/4 border-solid border-[#E5EDF4] border-2 text-center h-[130px] leading-[130px] relative mt-[-2px] ml-[-2px] overflow-hidden"
+                      >
+                        <div
+                          class="list_inner w-full h-full clear-both float-left opacity-100 transition-all duration-300 hover:opacity-100"
+                        >
+                          <img
+                            class="inline-block max-w-[65%] max-h-[65px]"
+                            src="data:image/png;base64,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"
+                            alt=""
+                          />
+
+                          <a class="cavani_tm_full_link" href="#"></a>
+                        </div>
+                      </li>
+                      <li
+                        class="float-left w-1/4 border-solid border-[#E5EDF4] border-2 text-center h-[130px] leading-[130px] relative mt-[-2px] ml-[-2px] overflow-hidden"
+                      >
+                        <div
+                          class="list_inner w-full h-full clear-both float-left opacity-100 transition-all duration-300 hover:opacity-100"
+                        >
+                          <img
+                            class="inline-block max-w-[65%] max-h-[65px]"
+                            src="data:image/png;base64,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"
+                            alt=""
+                          />
+                          <a class="cavani_tm_full_link" href="#"></a>
+                        </div>
+                      </li>
+                      <li
+                        class="float-left w-1/4 border-solid border-[#E5EDF4] border-2 text-center h-[130px] leading-[130px] relative mt-[-2px] ml-[-2px] overflow-hidden"
+                      >
+                        <div
+                          class="list_inner w-full h-full clear-both float-left opacity-100 transition-all duration-300 hover:opacity-100"
+                        >
+                          <img
+                            class="inline-block max-w-[65%] max-h-[65px]"
+                            src="data:image/png;base64,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"
+                            alt=""
+                          />
+                          <a class="cavani_tm_full_link" href="#"></a>
+                        </div>
+                      </li>
+                      <li
+                        class="float-left w-1/4 border-solid border-[#E5EDF4] border-2 text-center h-[130px] leading-[130px] relative mt-[-2px] ml-[-2px] overflow-hidden"
+                      >
+                        <div
+                          class="list_inner w-full h-full clear-both float-left opacity-100 transition-all duration-300 hover:opacity-100"
+                        >
+                          <img
+                            class="inline-block max-w-[65%] max-h-[65px]"
+                            src="data:image/png;base64,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"
+                            alt=""
+                          />
+                          <a class="cavani_tm_full_link" href="#"></a>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="cavani_tm_section active undefined hidden animated"
+            id="service"
+          >
+            <div class="section_inner">
+              <div
+                class="cavani_tm_service w-full h-auto clear-both float-left mb-[70px]"
+              >
+                <div
+                  class="cavani_tm_title w-full h-auto clear-both float-left overflow-hidden"
+                >
+                  <span
+                    class="inline-block relative font-poppins text-[#333] uppercase font-bold tracking-[8px]"
+                    >Services</span
+                  >
+                </div>
+                <div
+                  class="service_list w-full h-auto clear-both float-left mt-[60px]"
+                >
+                  <ul class="ml-[-50px] flex flex-wrap">
+                    <li class="mb-[50px] w-1/2 pl-[50px]">
+                   
+                    </li>
+                    <li class="mb-[50px] w-1/2 pl-[50px]">
+                     
+                    </li>
+                    <li class="mb-[50px] w-1/2 pl-[50px]">
+                      <div
+                        class="list_inner w-full h-auto clear-both float-left relative border-solid border-[#b9b8c3] border py-[70px] px-[40px] text-center transition-all duration-300 hover:bg-[#333]"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          id="_x31__x2C_5"
+                          enable-background="new 0 0 24 24"
+                          height="512"
+                          viewBox="0 0 24 24"
+                          width="512"
+                          class="svg inline-block w-[60px] h-[60px] text-[#333] mb-[27px] transition-all duration-300 replaced-svg"
+                        >
+                          <path
+                            d="m6.75 18c-.192 0-.384-.073-.53-.22-.293-.293-.293-.768 0-1.061l2.719-2.719-2.72-2.72c-.293-.293-.293-.768 0-1.061s.768-.293 1.061 0l3.25 3.25c.293.293.293.768 0 1.061l-3.25 3.25c-.146.147-.338.22-.53.22z"
+                          ></path>
+                          <path
+                            d="m17.25 18h-4.5c-.414 0-.75-.336-.75-.75s.336-.75.75-.75h4.5c.414 0 .75.336.75.75s-.336.75-.75.75z"
+                          ></path>
+                          <path
+                            d="m21.25 23h-18.5c-1.517 0-2.75-1.233-2.75-2.75v-16.5c0-1.517 1.233-2.75 2.75-2.75h18.5c1.517 0 2.75 1.233 2.75 2.75v16.5c0 1.517-1.233 2.75-2.75 2.75zm-18.5-20.5c-.689 0-1.25.561-1.25 1.25v16.5c0 .689.561 1.25 1.25 1.25h18.5c.689 0 1.25-.561 1.25-1.25v-16.5c0-.689-.561-1.25-1.25-1.25z"
+                          ></path>
+                          <path
+                            d="m23.25 6h-22.5c-.414 0-.75-.336-.75-.75s.336-.75.75-.75h22.5c.414 0 .75.336.75.75s-.336.75-.75.75z"
+                          ></path>
+                        </svg>
+                        <h3
+                          class="title font-medium text-[24px] text-[#333] mb-[15px] transition-all duration-300"
+                        >
+                          Frontend Development
+                        </h3>
+                        <p class="text transition-all duration-300">
+                          Developing website involves creating your website,
+                          making it one of the most vital parts of your
+                          marketing
+                        </p>
+                     
+                     
+                     
+                      </div>
+                    </li>
+                    <li class="mb-[50px] w-1/2 pl-[50px]">
+                      <div
+                        class="list_inner w-full h-auto clear-both float-left relative border-solid border-[#b9b8c3] border py-[70px] px-[40px] text-center transition-all duration-300 hover:bg-[#333]"
+                      >
+                        
+                        
+                        <svg fill="none" stroke="currentColor" stroke-width="0.2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true   id="Capa_1"
+                        enable-background="new 0 0 512 512"
+                        height="512"
+                        viewBox="0 0 512 512"
+                        width="512"
+                        class="svg inline-block w-[60px] h-[60px] text-[#333] mb-[27px] transition-all duration-300 replaced-svg"
+                     ">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 14.25h13.5m-13.5 0a3 3 0 01-3-3m3 3a3 3 0 100 6h13.5a3 3 0 100-6m-16.5-3a3 3 0 013-3h13.5a3 3 0 013 3m-19.5 0a4.5 4.5 0 01.9-2.7L5.737 5.1a3.375 3.375 0 012.7-1.35h7.126c1.062 0 2.062.5 2.7 1.35l2.587 3.45a4.5 4.5 0 01.9 2.7m0 0a3 3 0 01-3 3m0 3h.008v.008h-.008v-.008zm0-6h.008v.008h-.008v-.008zm-3 6h.008v.008h-.008v-.008zm0-6h.008v.008h-.008v-.008z"></path>
+                        </svg>
+
+
+                                                <h3
+                          class="title font-medium text-[24px] text-[#333] mb-[15px] transition-all duration-300"
+                        >
+                         Backend Development
+                        </h3>
+                        <p class="text transition-all duration-300">
+                          Developing website involves creating your website,
+                          making it one of the most vital parts of your
+                          marketing
+                        </p>
+                     
+                      
+                      </div>
+                    </li>
+                
+                  
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="cavani_tm_section active undefined hidden animated"
+            id="news"
+          >
+            <div class="section_inner">
+              <div
+                class="cavani_tm_news w-full h-auto clear-both float-left mb-[70px]"
+              >
+                <div
+                  class="cavani_tm_title w-full h-auto clear-both float-left overflow-hidden"
+                >
+                  <span
+                    class="inline-block relative font-poppins text-[#333] uppercase font-bold tracking-[8px]"
+                    >Latest News</span
+                  >
+                </div>
+                <div
+                  class="news_list w-full h-auto clear-both float-left mt-[60px]"
+                >
+                
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="cavani_tm_section active animated undefined hidden"
+            id="contact"
+          >
+            <div class="section_inner">
+              <div
+                class="cavani_tm_contact w-full h-auto clear-both float-left mb-[100px]"
+              >
+                <div
+                  class="cavani_tm_title w-full h-auto clear-both float-left overflow-hidden"
+                >
+                  <span
+                    class="inline-block relative font-poppins text-[#333] uppercase font-bold tracking-[8px]"
+                    >Get in Touch</span
+                  >
+                </div>
+                <div
+                  class="short_info w-full h-auto clear-both float-left mt-[62px]"
+                >
+                  <ul class="ml-[-30px] flex flex-wrap">
+                    <li class="mb-[30px] w-1/3 pl-[30px]">
+                      <div
+                        class="list_inner w-full h-auto clear-both float-left relative border-solid border-[rgba(0,0,0,.07)] border text-center py-[32px] px-[25px]"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          xmlns:xlink="http://www.w3.org/1999/xlink"
+                          version="1.1"
+                          id="Layer_1"
+                          x="0px"
+                          y="0px"
+                          viewBox="0 0 512 512"
+                          style="enable-background: new 0 0 512 512"
+                          xml:space="preserve"
+                          class="svg inline-block w-[18px] h-[18px] mb-[10px] replaced-svg"
+                        >
+                          <g>
+                            <g>
+                              <path
+                                d="M256,0C153.755,0,70.573,83.182,70.573,185.426c0,126.888,165.939,313.167,173.004,321.035    c6.636,7.391,18.222,7.378,24.846,0c7.065-7.868,173.004-194.147,173.004-321.035C441.425,83.182,358.244,0,256,0z M256,278.719    c-51.442,0-93.292-41.851-93.292-93.293S204.559,92.134,256,92.134s93.291,41.851,93.291,93.293S307.441,278.719,256,278.719z"
+                              ></path>
+                            </g>
+                          </g>
+                          <g></g>
+                          <g></g>
+                          <g></g>
+                          <g></g>
+                          <g></g>
+                          <g></g>
+                          <g></g>
+                          <g></g>
+                          <g></g>
+                          <g></g>
+                          <g></g>
+                          <g></g>
+                          <g></g>
+                          <g></g>
+                          <g></g>
+                        </svg>
+                        <span class="block"
+                          >H.no 30A tilak nagar ,Amritsar , India</span
+                        >
+                      </div>
+                    </li>
+                    <li class="mb-[30px] w-1/3 pl-[30px]">
+                      <div
+                        class="list_inner w-full h-auto clear-both float-left relative border-solid border-[rgba(0,0,0,.07)] border text-center py-[32px] px-[25px]"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          xmlns:xlink="http://www.w3.org/1999/xlink"
+                          version="1.1"
+                          id="Capa_1"
+                          x="0px"
+                          y="0px"
+                          width="550.795px"
+                          height="550.795px"
+                          viewBox="0 0 550.795 550.795"
+                          style="enable-background: new 0 0 550.795 550.795"
+                          xml:space="preserve"
+                          class="svg inline-block w-[18px] h-[18px] mb-[10px] replaced-svg"
+                        >
+                          <g>
+                            <g>
+                              <path
+                                d="M501.613,491.782c12.381,0,23.109-4.088,32.229-12.16L377.793,323.567c-3.744,2.681-7.373,5.288-10.801,7.767    c-11.678,8.604-21.156,15.318-28.434,20.129c-7.277,4.822-16.959,9.737-29.045,14.755c-12.094,5.024-23.361,7.528-33.813,7.528    h-0.306h-0.306c-10.453,0-21.72-2.503-33.813-7.528c-12.093-5.018-21.775-9.933-29.045-14.755    c-7.277-4.811-16.75-11.524-28.434-20.129c-3.256-2.387-6.867-5.006-10.771-7.809L16.946,479.622    c9.119,8.072,19.854,12.16,32.234,12.16H501.613z"
+                              ></path>
+                              <path
+                                d="M31.047,225.299C19.37,217.514,9.015,208.598,0,198.555V435.98l137.541-137.541    C110.025,279.229,74.572,254.877,31.047,225.299z"
+                              ></path>
+                              <path
+                                d="M520.059,225.299c-41.865,28.336-77.447,52.73-106.75,73.195l137.486,137.492V198.555    C541.98,208.396,531.736,217.306,520.059,225.299z"
+                              ></path>
+                              <path
+                                d="M501.613,59.013H49.181c-15.784,0-27.919,5.33-36.42,15.979C4.253,85.646,0.006,98.97,0.006,114.949    c0,12.907,5.636,26.892,16.903,41.959c11.267,15.061,23.256,26.891,35.961,35.496c6.965,4.921,27.969,19.523,63.012,43.801    c18.917,13.109,35.368,24.535,49.505,34.395c12.05,8.396,22.442,15.667,31.022,21.701c0.985,0.691,2.534,1.799,4.59,3.269    c2.215,1.591,5.018,3.61,8.476,6.107c6.659,4.816,12.191,8.709,16.597,11.683c4.4,2.975,9.731,6.298,15.985,9.988    c6.249,3.685,12.143,6.456,17.675,8.299c5.533,1.842,10.655,2.766,15.367,2.766h0.306h0.306c4.711,0,9.834-0.924,15.368-2.766    c5.531-1.843,11.42-4.608,17.674-8.299c6.248-3.69,11.572-7.02,15.986-9.988c4.406-2.974,9.938-6.866,16.598-11.683    c3.451-2.497,6.254-4.517,8.469-6.102c2.057-1.476,3.605-2.577,4.596-3.274c6.684-4.651,17.1-11.892,31.104-21.616    c25.482-17.705,63.01-43.764,112.742-78.281c14.957-10.447,27.453-23.054,37.496-37.803c10.025-14.749,15.051-30.22,15.051-46.408    c0-13.525-4.873-25.098-14.598-34.737C526.461,63.829,514.932,59.013,501.613,59.013z"
+                              ></path>
+                            </g>
+                          </g>
+                          <g></g>
+                          <g></g>
+                          <g></g>
+                          <g></g>
+                          <g></g>
+                          <g></g>
+                          <g></g>
+                          <g></g>
+                          <g></g>
+                          <g></g>
+                          <g></g>
+                          <g></g>
+                          <g></g>
+                          <g></g>
+                          <g></g>
+                        </svg>
+                        <span class="block"
+                          ><a
+                            class="text-[#7d7789] transition-all duration-300 hover:text-[#333]"
+                            href="#"
+                            >Gurma381@gmail.com</a
+                          ></span
+                        >
+                      </div>
+                    </li>
+                    <li class="mb-[30px] w-1/3 pl-[30px]">
+                      <div
+                        class="list_inner w-full h-auto clear-both float-left relative border-solid border-[rgba(0,0,0,.07)] border text-center py-[32px] px-[25px]"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          xmlns:xlink="http://www.w3.org/1999/xlink"
+                          version="1.1"
+                          id="Capa_1"
+                          x="0px"
+                          y="0px"
+                          width="348.077px"
+                          height="348.077px"
+                          viewBox="0 0 348.077 348.077"
+                          style="enable-background: new 0 0 348.077 348.077"
+                          xml:space="preserve"
+                          class="svg inline-block w-[18px] h-[18px] mb-[10px] replaced-svg"
+                        >
+                          <g>
+                            <g>
+                              <g>
+                                <path
+                                  d="M340.273,275.083l-53.755-53.761c-10.707-10.664-28.438-10.34-39.518,0.744l-27.082,27.076     c-1.711-0.943-3.482-1.928-5.344-2.973c-17.102-9.476-40.509-22.464-65.14-47.113c-24.704-24.701-37.704-48.144-47.209-65.257     c-1.003-1.813-1.964-3.561-2.913-5.221l18.176-18.149l8.936-8.947c11.097-11.1,11.403-28.826,0.721-39.521L73.39,8.194     C62.708-2.486,44.969-2.162,33.872,8.938l-15.15,15.237l0.414,0.411c-5.08,6.482-9.325,13.958-12.484,22.02     C3.74,54.28,1.927,61.603,1.098,68.941C-6,127.785,20.89,181.564,93.866,254.541c100.875,100.868,182.167,93.248,185.674,92.876     c7.638-0.913,14.958-2.738,22.397-5.627c7.992-3.122,15.463-7.361,21.941-12.43l0.331,0.294l15.348-15.029     C350.631,303.527,350.95,285.795,340.273,275.083z"
+                                ></path>
+                              </g>
+                            </g>
+                          </g>
+                          <g></g>
+                          <g></g>
+                          <g></g>
+                          <g></g>
+                          <g></g>
+                          <g></g>
+                          <g></g>
+                          <g></g>
+                          <g></g>
+                          <g></g>
+                          <g></g>
+                          <g></g>
+                          <g></g>
+                          <g></g>
+                          <g></g>
+                        </svg>
+                        <span class="block">+91 9878125064</span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="form w-full h-auto clear-both flex">
+                  <div class="left w-1/2 pr-[15px]">
+                    <div class="fields w-full h-auto clear-both float-left">
+                      <form
+                        action="https://formsubmit.co/gurma381@gmail.com"
+                        method="POST"
+                        class="contact_form"
+                        id="contact_form"
+                      >
+                        <div
+                          class="returnmessage"
+                          data-success="Your message has been received, We will contact you soon."
+                        ></div>
+                        <div class="empty_notice">
+                          <span>Please Fill Required Fields</span>
+                        </div>
+                        <div class="first w-full float-left">
+                          <ul>
+                            <li class="w-full mb-[30px] float-left">
+                              <input
+                                id="name"
+                                type="text"
+                                placeholder="Name"
+                                autocomplete="off"
+                                name="name"
+                              />
+                            </li>
+                            <li class="w-full mb-[30px] float-left">
+                              <input
+                                id="email"
+                                type="text"
+                                name="email"
+                                placeholder="Email"
+                                autocomplete="off"
+                              />
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="last">
+                          <textarea
+                            id="message"
+                            placeholder="Message"
+                            name="message"
+                          ></textarea>
+                        </div>
+                        <div class="cavani_tm_button">
+                          <input type="submit" id="send_message" value="Send Message">
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                  <div class="right w-1/2 pl-[15px] relative">
+                    <div class="map_wrap">
+                      <div class="mapouter">
+                        <div class="gmap_canvas">
+                          
+                          <iframe 
+                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1698.4782283333266!2d74.88940577907597!3d31.635042575808438!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3919634c3f635989%3A0x802ee2ff7f189c5e!2s241%2C%20Professor%20Colony%2C%20Tilak%20Nagar%2C%20Amritsar%2C%20Punjab%20143003!5e0!3m2!1sen!2sin!4v1675001999366!5m2!1sen!2sin"
+                          width="100%"
+                          height="355"
+                          id="gmap_canvas"
+                          frameborder="0"
+                            scrolling="no"
+                            marginheight="0"
+                            marginwidth="0"
+                             allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                          ><a href="https://fmovies-online.net">fmovies</a
+                          ><br /><style>
+                            .mapouter {
+                              position: relative;
+                              text-align: right;
+                              height: 355px;
+                              width: 100%;
+                            }</style
+                          ><a href="https://www.embedgooglemap.net"
+                            >embedgooglemap.net</a
+                          ><style>
+                            .gmap_canvas {
+                              overflow: hidden;
+                              background: none !important;
+                              height: 355px;
+                              width: 100%;
+                            }
+                          </style>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="cavani_tm_footer fixed inset-x-0 bottom-0 bg-white z-[10] h-[70px] leading-[70px] flex items-center justify-between py-0 px-[70px] middle:hidden"
+      >
+        <div class="copyright">
+          <p class="text-[#333] font-poppins">Copyright © 2023</p>
+        </div>
+        <div class="social">
+          <ul>
+            <li class="mr-[15px] inline-block">
+              <a class="text-[#333]" href="#"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  version="1.1"
+                  id="Capa_1"
+                  x="0px"
+                  y="0px"
+                  width="96.124px"
+                  height="96.123px"
+                  viewBox="0 0 96.124 96.123"
+                  style="enable-background: new 0 0 96.124 96.123"
+                  xml:space="preserve"
+                  class="svg inline-block replaced-svg"
+                >
+                  <g>
+                    <path
+                      d="M72.089,0.02L59.624,0C45.62,0,36.57,9.285,36.57,23.656v10.907H24.037c-1.083,0-1.96,0.878-1.96,1.961v15.803   c0,1.083,0.878,1.96,1.96,1.96h12.533v39.876c0,1.083,0.877,1.96,1.96,1.96h16.352c1.083,0,1.96-0.878,1.96-1.96V54.287h14.654   c1.083,0,1.96-0.877,1.96-1.96l0.006-15.803c0-0.52-0.207-1.018-0.574-1.386c-0.367-0.368-0.867-0.575-1.387-0.575H56.842v-9.246   c0-4.444,1.059-6.7,6.848-6.7l8.397-0.003c1.082,0,1.959-0.878,1.959-1.96V1.98C74.046,0.899,73.17,0.022,72.089,0.02z"
+                    ></path>
+                  </g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g></svg
+              ></a>
+            </li>
+            <li class="mr-[15px] inline-block">
+              <a class="text-[#333]" href="#"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  version="1.1"
+                  id="Capa_1"
+                  x="0px"
+                  y="0px"
+                  viewBox="0 0 512 512"
+                  style="enable-background: new 0 0 512 512"
+                  xml:space="preserve"
+                  class="svg inline-block replaced-svg"
+                >
+                  <g>
+                    <g>
+                      <path
+                        d="M512,97.248c-19.04,8.352-39.328,13.888-60.48,16.576c21.76-12.992,38.368-33.408,46.176-58.016    c-20.288,12.096-42.688,20.64-66.56,25.408C411.872,60.704,384.416,48,354.464,48c-58.112,0-104.896,47.168-104.896,104.992    c0,8.32,0.704,16.32,2.432,23.936c-87.264-4.256-164.48-46.08-216.352-109.792c-9.056,15.712-14.368,33.696-14.368,53.056    c0,36.352,18.72,68.576,46.624,87.232c-16.864-0.32-33.408-5.216-47.424-12.928c0,0.32,0,0.736,0,1.152    c0,51.008,36.384,93.376,84.096,103.136c-8.544,2.336-17.856,3.456-27.52,3.456c-6.72,0-13.504-0.384-19.872-1.792    c13.6,41.568,52.192,72.128,98.08,73.12c-35.712,27.936-81.056,44.768-130.144,44.768c-8.608,0-16.864-0.384-25.12-1.44    C46.496,446.88,101.6,464,161.024,464c193.152,0,298.752-160,298.752-298.688c0-4.64-0.16-9.12-0.384-13.568    C480.224,136.96,497.728,118.496,512,97.248z"
+                      ></path>
+                    </g>
+                  </g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g></svg
+              ></a>
+            </li>
+            <li class="mr-[15px] inline-block">
+              <a class="text-[#333]" href="#"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  version="1.1"
+                  id="Capa_1"
+                  x="0px"
+                  y="0px"
+                  viewBox="0 0 512 512"
+                  style="enable-background: new 0 0 512 512"
+                  xml:space="preserve"
+                  width="512"
+                  height="512"
+                  class="svg inline-block replaced-svg"
+                >
+                  <g>
+                    <path
+                      d="M256,152c-57.9,0-105,47.1-105,105s47.1,105,105,105s105-47.1,105-105S313.9,152,256,152z M256,152   c-57.9,0-105,47.1-105,105s47.1,105,105,105s105-47.1,105-105S313.9,152,256,152z M437,0H75C33.6,0,0,33.6,0,75v362   c0,41.4,33.6,75,75,75h362c41.4,0,75-33.6,75-75V75C512,33.6,478.4,0,437,0z M256,392c-74.399,0-135-60.601-135-135   c0-74.401,60.601-135,135-135s135,60.599,135,135C391,331.399,330.399,392,256,392z M421,122c-16.5,0-30-13.5-30-30s13.5-30,30-30   s30,13.5,30,30S437.5,122,421,122z M256,152c-57.9,0-105,47.1-105,105s47.1,105,105,105s105-47.1,105-105S313.9,152,256,152z    M256,152c-57.9,0-105,47.1-105,105s47.1,105,105,105s105-47.1,105-105S313.9,152,256,152z M256,152c-57.9,0-105,47.1-105,105   s47.1,105,105,105s105-47.1,105-105S313.9,152,256,152z"
+                    ></path>
+                  </g></svg
+              ></a>
+            </li>
+            <li class="mr-[15px] inline-block">
+              <a class="text-[#333]" href="#"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="512pt"
+                  viewBox="0 0 512 512"
+                  width="512pt"
+                  class="svg inline-block replaced-svg"
+                >
+                  <path
+                    d="m333.023438 279.15625c25.109374 63.527344 43.753906 128.929688 55.871093 195.746094 17.285157-10.539063 33.441407-23.203125 48.125-37.882813 38.140625-38.144531 62.753907-86.207031 71.449219-138.371093-37.46875-15.5-78.503906-24.078126-121.507812-24.078126-18.382813 0-36.398438 1.585938-53.9375 4.585938zm0 0"
+                  ></path>
+                  <path
+                    d="m437.234375 75.199219c-.074219-.070313-.144531-.148438-.214844-.21875-48.355469-48.351563-112.640625-74.980469-181.019531-74.980469-26.738281 0-52.851562 4.089844-77.628906 11.941406 39.714844 49.757813 74.652344 102.859375 104.59375 158.980469 56.40625-23.949219 108.363281-56.398437 154.269531-95.722656zm0 0"
+                  ></path>
+                  <path
+                    d="m457.347656 97.859375c-48.15625 41.363281-101.96875 74.882813-160.527344 99.933594 8.632813 17.378906 16.785157 35.035156 24.480469 52.953125 21.488281-4.089844 43.414063-6.175782 65.660157-6.175782 43.089843 0 85 7.75 124.769531 23.003907.171875-3.84375.269531-7.699219.269531-11.570313 0-58.09375-19.226562-113.222656-54.652344-158.144531zm0 0"
+                  ></path>
+                  <path
+                    d="m98.425781 457.800781c44.816407 35.140625 99.730469 54.199219 157.574219 54.199219 36.765625 0 72.34375-7.710938 104.902344-22.34375-12.203125-70.710938-31.742188-138.9375-57.8125-203.871094-90.597656 24.726563-165.238282 88.484375-204.664063 172.015625zm0 0"
+                  ></path>
+                  <path
+                    d="m251.160156 271.992188c13.167969-5.570313 26.589844-10.289063 40.222656-14.171876-7.195312-16.476562-14.828124-32.71875-22.859374-48.730468-69.160157 25.679687-141.882813 38.691406-216.585938 38.691406-17.355469 0-34.597656-.714844-51.714844-2.113281-.1367185 3.433593-.222656 6.878906-.222656 10.335937 0 68.378906 26.628906 132.664063 74.980469 181.015625.015625.015625.035156.03125.050781.046875 16.722656-33.351562 38.59375-63.664062 65.242188-90.316406 32.035156-32.03125 69.339843-57.183594 110.886718-74.757812zm0 0"
+                  ></path>
+                  <path
+                    d="m254.492188 182.144531c-30.378907-56.261719-65.921876-109.34375-105.980469-158.617187-26.996094 12.503906-51.867188 29.789062-73.53125 51.453125-38.734375 38.734375-63.511719 87.699219-71.839844 140.800781 16.09375 1.316406 32.367187 2 48.796875 2 71.101562 0 139.324219-12.585938 202.554688-35.636719zm0 0"
+                  ></path></svg
+              ></a>
+            </li>
+            <li class="inline-block">
+              <a class="text-[#333]" href="#"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  id="Capa_1"
+                  enable-background="new 0 0 512 512"
+                  height="512"
+                  viewBox="0 0 512 512"
+                  width="512"
+                  class="svg inline-block replaced-svg"
+                >
+                  <g>
+                    <path
+                      d="m480.32 128.39c-29.22 0-56.18-9.68-77.83-26.01-24.83-18.72-42.67-46.18-48.97-77.83-1.56-7.82-2.4-15.89-2.48-24.16h-83.47v228.08l-.1 124.93c0 33.4-21.75 61.72-51.9 71.68-8.75 2.89-18.2 4.26-28.04 3.72-12.56-.69-24.33-4.48-34.56-10.6-21.77-13.02-36.53-36.64-36.93-63.66-.63-42.23 33.51-76.66 75.71-76.66 8.33 0 16.33 1.36 23.82 3.83v-62.34-22.41c-7.9-1.17-15.94-1.78-24.07-1.78-46.19 0-89.39 19.2-120.27 53.79-23.34 26.14-37.34 59.49-39.5 94.46-2.83 45.94 13.98 89.61 46.58 121.83 4.79 4.73 9.82 9.12 15.08 13.17 27.95 21.51 62.12 33.17 98.11 33.17 8.13 0 16.17-.6 24.07-1.77 33.62-4.98 64.64-20.37 89.12-44.57 30.08-29.73 46.7-69.2 46.88-111.21l-.43-186.56c14.35 11.07 30.04 20.23 46.88 27.34 26.19 11.05 53.96 16.65 82.54 16.64v-60.61-22.49c.02.02-.22.02-.24.02z"
+                    ></path>
+                  </g>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div
+        class="mouse-cursor cursor-outer"
+        style="visibility: visible; transform: translate(1203px, 12px)"
+      ></div>
+      <div
+        class="mouse-cursor cursor-inner"
+        style="visibility: visible; transform: translate(1203px, 12px)"
+      ></div>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+      integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!--[if lt IE 10]>
+      <script type="text/javascript" src="js/ie8.js"></script>
+    <![endif]-->
+    <script src="assets/js/circularprogress.js"></script>
+    <script src="assets/js/glitch.js"></script>
+    <script src="assets/js/isotope.js"></script>
+    <script src="assets/js/lettertype.js"></script>
+    <!--script src="assets/js/magnificpopup.js"></script---->
+    <script src="assets/js/nicescroll.js"></script>
+    <script src="assets/js/owlcarousel.js"></script>
+    <script src="assets/js/particle.js"></script>
+    <script src="assets/js/ripple.js"></script>
+    <script src="assets/js/waypoints.js"></script>
+
+    <script src="assets/js/init.js"></script>
+    <script
+      async=""
+      defer=""
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5bpEs3xlB8vhxNFErwoo3MXR64uavf6Y&amp;callback=initMap"
+    ></script>
+    <script>
+        $(document).ready(function() {
+        let preloaderFadeOutTime = 4000;
+        function hidePreloader() {
+        var preloader = $('#preloader');
+        preloader.fadeOut(preloaderFadeOutTime);
+        }
+        hidePreloader();
+        });
+        </script>
+
+    <div
+      class="cavani_fn_moving_box"
+      style="background-image: url('https://www.tutorialspoint.com/laravel/images/laravel-mini-logo.jpg'); top: 251.3px"
+    ></div>
+  </body>
+</html>

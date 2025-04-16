@@ -520,10 +520,10 @@ body::-webkit-scrollbar-thumb {
 .glitch {
     position: absolute;
     width: 100%;
-    height: 100%;
-    top: 0;
+    height: 80%;
+    top: 50px;
     left: 0;
-    background-image: url(..//img/about/2.jpg);
+    background-image: url(..//img/about/6.png);
     background-size: cover;
     -webkit-background-size: cover;
     background-position: center;

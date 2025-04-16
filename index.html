@@ -362,7 +362,22 @@
             <a
               class="text text-black uppercase font-poppins text-[22px] font-extrabold tracking-[2px] leading-[50px]"
               href="/"
-              ><span>Gurman Deep</span></a
+              >
+		        <h2 class="flex text-6xl" class="animeText">
+            <span class="span">G</span>
+            <span class="span">U</span>
+            <span class="span">R</span>
+            <span class="span">M</span>
+            <span class="span">A</span>
+            <span class="span">N</span>
+            <span class="span">&nbsp;</span>
+            <span class="span">D</span>
+            <span class="span">E</span>
+            <span class="span">E</span>
+            <span class="span">P</span>
+          </h2>
+    </div>
+	      </a
             >
           </div>
           <div class="trigger relative top-[5px]">
@@ -1816,4 +1831,26 @@
       style="background-image: url('https://www.tutorialspoint.com/laravel/images/laravel-mini-logo.jpg'); top: 251.3px"
     ></div>
   </body>
+	<script>
+	import anime from 'https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.es.js';
+
+
+    anime({
+      targets: '.span',
+      translateY: [
+        { value: '-2.75rem', easing: 'easeOutExpo', duration: 600 },
+        { value: 0, easing: 'easeOutBounce', duration: 800, delay: 100 }
+      ],
+      rotate: {
+        value: '-1turn',
+        delay: 0
+      },
+      delay: (_, i) => i * 500,
+      easing: 'easeInOutCirc',
+      loopDelay: 100000,
+      loop: true
+    });
+
+    	
+	</script>
 </html>
